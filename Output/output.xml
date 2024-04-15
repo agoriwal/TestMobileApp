@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231225 18:51:28.075" rpa="false" schemaversion="4">
+<suite id="s1" name="Android Verify Home Page" source="C:\Users\AMIT'S\PycharmProjects\demoMusicApp\Tests\android_verify_home_page.robot">
+<test id="s1-t1" name="Verify_HomeLanding_Page" line="12">
+<kw name="Open Spotify music app" library="android_homepage_keywords">
+<msg timestamp="20231225 18:51:28.936" level="TRACE">Arguments: [  ]</msg>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.spotify.music</arg>
+<arg>appActivity=com.spotify.music.SpotifyMainActivity</arg>
+<arg>automationName=UiAutomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<msg timestamp="20231225 18:51:28.937" level="TRACE">Arguments: [ 'http://localhost:4723' | platformName='Android' | deviceName='emulator-5554' | appPackage='com.spotify.music' | appActivity='com.spotify.music.SpotifyMainActivity' | automationName='UiAutomator2' ]</msg>
+<msg timestamp="20231225 18:51:28.940" level="DEBUG">POST http://localhost:4723/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"platformName": "Android", "appium:deviceName": "emulator-5554", "appium:appPackage": "com.spotify.music", "appium:appActivity": "com.spotify.music.SpotifyMainActivity", "appium:automationName": "UiAutomator2"}}}</msg>
+<msg timestamp="20231225 18:51:29.498" level="DEBUG">Starting new HTTP connection (1): localhost:4723</msg>
+<msg timestamp="20231225 18:51:33.578" level="DEBUG">Incremented Retry for (url='/session'): Retry(total=2, connect=None, read=None, redirect=None, status=None)</msg>
+<msg timestamp="20231225 18:51:33.579" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABC31B4E90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg timestamp="20231225 18:51:33.581" level="DEBUG">Starting new HTTP connection (2): localhost:4723</msg>
+<msg timestamp="20231225 18:51:37.655" level="DEBUG">Incremented Retry for (url='/session'): Retry(total=1, connect=None, read=None, redirect=None, status=None)</msg>
+<msg timestamp="20231225 18:51:37.656" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABC31B6870&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg timestamp="20231225 18:51:37.658" level="DEBUG">Starting new HTTP connection (3): localhost:4723</msg>
+<msg timestamp="20231225 18:51:41.742" level="DEBUG">Incremented Retry for (url='/session'): Retry(total=0, connect=None, read=None, redirect=None, status=None)</msg>
+<msg timestamp="20231225 18:51:41.743" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABC31B7380&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg timestamp="20231225 18:51:41.745" level="DEBUG">Starting new HTTP connection (4): localhost:4723</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20231225 18:51:45.827" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231225 18:51:45.827" level="FAIL">No application is open</msg>
+<msg timestamp="20231225 18:51:46.297" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1314, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1074, in _send_output
+    self.send(msg)
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1018, in send
+    self.connect()
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x000001ABC31B5C70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 60, in open_application
+    application = webdriver.Remote(str(remote_url), options=desired_caps, strict_ssl=strict_ssl)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 208, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 318, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABC31B5C70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 34, in capture_page_screenshot
+    base64_screenshot = self._current_application().get_screenshot_as_base64()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open</msg>
+<status status="FAIL" starttime="20231225 18:51:45.826" endtime="20231225 18:51:46.298"/>
+</kw>
+<msg timestamp="20231225 18:51:46.303" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20231225 18:51:46.305" level="FAIL">MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABC31B5C70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<msg timestamp="20231225 18:51:46.311" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1314, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1074, in _send_output
+    self.send(msg)
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1018, in send
+    self.connect()
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x000001ABC31B5C70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 60, in open_application
+    application = webdriver.Remote(str(remote_url), options=desired_caps, strict_ssl=strict_ssl)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 208, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 318, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABC31B5C70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<status status="FAIL" starttime="20231225 18:51:28.937" endtime="20231225 18:51:46.311"/>
+</kw>
+<status status="FAIL" starttime="20231225 18:51:28.935" endtime="20231225 18:51:46.311"/>
+</kw>
+<kw name="User log in with email id and password" library="android_homepage_keywords">
+<status status="NOT RUN" starttime="20231225 18:51:46.313" endtime="20231225 18:51:46.313"/>
+</kw>
+<kw name="User lands on home page" library="android_homepage_keywords">
+<status status="NOT RUN" starttime="20231225 18:51:46.313" endtime="20231225 18:51:46.313"/>
+</kw>
+<kw name="By default user should land on Home tab" library="android_homepage_keywords">
+<status status="NOT RUN" starttime="20231225 18:51:46.313" endtime="20231225 18:51:46.313"/>
+</kw>
+<kw name="If user click on Search icon he should land on search tab" library="android_homepage_keywords">
+<arg>Search</arg>
+<status status="NOT RUN" starttime="20231225 18:51:46.313" endtime="20231225 18:51:46.313"/>
+</kw>
+<kw name="If user click on Your Library he should land on your library page" library="android_homepage_keywords">
+<arg>Your Library</arg>
+<status status="NOT RUN" starttime="20231225 18:51:46.313" endtime="20231225 18:51:46.313"/>
+</kw>
+<kw name="If user click on Premium he should land on premium tab" library="android_homepage_keywords">
+<status status="NOT RUN" starttime="20231225 18:51:46.314" endtime="20231225 18:51:46.314"/>
+</kw>
+<status status="FAIL" starttime="20231225 18:51:28.933" endtime="20231225 18:51:46.315">MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABC31B5C70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</status>
+</test>
+<test id="s1-t2" name="Create_New_Playlist" line="41">
+<kw name="Create_New_Playlist" library="android_homepage_keywords">
+<arg>DEMO-PLAY-LIST</arg>
+<msg timestamp="20231225 18:51:46.317" level="TRACE">Arguments: [ ${PLAYLIST-NAME}='DEMO-PLAY-LIST' ]</msg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${ICON-YOUR}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231225 18:51:46.318" level="TRACE">Arguments: [ '//android.widget.ImageView[@content-desc="Your Library"]' ]</msg>
+<msg timestamp="20231225 18:51:46.323" level="INFO">Clicking element '//android.widget.ImageView[@content-desc="Your Library"]'.</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20231225 18:51:46.323" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231225 18:51:46.323" level="FAIL">No application is open</msg>
+<msg timestamp="20231225 18:51:46.328" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_element.py", line 43, in click_element
+    self._element_find(locator, True, True).click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_element.py", line 636, in _element_find
+    application = self._current_application()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 34, in capture_page_screenshot
+    base64_screenshot = self._current_application().get_screenshot_as_base64()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open</msg>
+<status status="FAIL" starttime="20231225 18:51:46.323" endtime="20231225 18:51:46.328"/>
+</kw>
+<msg timestamp="20231225 18:51:46.334" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20231225 18:51:46.335" level="FAIL">No application is open</msg>
+<msg timestamp="20231225 18:51:46.337" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_element.py", line 43, in click_element
+    self._element_find(locator, True, True).click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_element.py", line 636, in _element_find
+    application = self._current_application()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open</msg>
+<status status="FAIL" starttime="20231225 18:51:46.318" endtime="20231225 18:51:46.337"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${HEADER-YOUR-LIBRARY}</arg>
+<arg>timeout=200</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.337" endtime="20231225 18:51:46.337"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CREATE-PLAYLIST-ICON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.337" endtime="20231225 18:51:46.338"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CREATE-PLAYLIST}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.338" endtime="20231225 18:51:46.338"/>
+</kw>
+<kw name="Clear Text" library="AppiumLibrary">
+<arg>${NAME-CREATE-PLAYLIST}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.338" endtime="20231225 18:51:46.338"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${NAME-CREATE-PLAYLIST}</arg>
+<arg>${PLAYLIST-NAME}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.338" endtime="20231225 18:51:46.338"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BUTTON-CREATE-PLAYLIST}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.338" endtime="20231225 18:51:46.338"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${NAME-NEW-PLAYLIST}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.339" endtime="20231225 18:51:46.339"/>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<arg>${NAME-NEW-PLAYLIST}</arg>
+<arg>${PLAYLIST-NAME}</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.339" endtime="20231225 18:51:46.339"/>
+</kw>
+<status status="FAIL" starttime="20231225 18:51:46.317" endtime="20231225 18:51:46.339"/>
+</kw>
+<kw name="Add_Songs_To_Playlist" library="android_homepage_keywords">
+<status status="NOT RUN" starttime="20231225 18:51:46.340" endtime="20231225 18:51:46.340"/>
+</kw>
+<kw name="Playlist_Should_Display_In_User_Profile_Page" library="android_homepage_keywords">
+<status status="NOT RUN" starttime="20231225 18:51:46.340" endtime="20231225 18:51:46.340"/>
+</kw>
+<kw name="New_Playlist_Created_Is_Displayed" library="android_homepage_keywords">
+<arg>DEMO-PLAY-LIST</arg>
+<status status="NOT RUN" starttime="20231225 18:51:46.342" endtime="20231225 18:51:46.342"/>
+</kw>
+<status status="FAIL" starttime="20231225 18:51:46.316" endtime="20231225 18:51:46.342">No application is open</status>
+</test>
+<test id="s1-t3" name="Delete_PlayList" line="47">
+<kw name="Delete_PlayList_Library_Page" library="android_homepage_keywords">
+<msg timestamp="20231225 18:51:46.346" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${ICON-YOUR}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231225 18:51:46.346" level="TRACE">Arguments: [ '//android.widget.ImageView[@content-desc="Your Library"]' ]</msg>
+<msg timestamp="20231225 18:51:46.353" level="INFO">Clicking element '//android.widget.ImageView[@content-desc="Your Library"]'.</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20231225 18:51:46.354" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231225 18:51:46.354" level="FAIL">No application is open</msg>
+<msg timestamp="20231225 18:51:46.357" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_element.py", line 43, in click_element
+    self._element_find(locator, True, True).click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_element.py", line 636, in _element_find
+    application = self._current_application()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 34, in capture_page_screenshot
+    base64_screenshot = self._current_application().get_screenshot_as_base64()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open</msg>
+<status status="FAIL" starttime="20231225 18:51:46.353" endtime="20231225 18:51:46.357"/>
+</kw>
+<msg timestamp="20231225 18:51:46.362" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20231225 18:51:46.364" level="FAIL">No application is open</msg>
+<msg timestamp="20231225 18:51:46.365" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_element.py", line 43, in click_element
+    self._element_find(locator, True, True).click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_element.py", line 636, in _element_find
+    application = self._current_application()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open</msg>
+<status status="FAIL" starttime="20231225 18:51:46.346" endtime="20231225 18:51:46.365"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${HEADER-YOUR-LIBRARY}</arg>
+<arg>timeout=200</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.366" endtime="20231225 18:51:46.366"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${NME-PLYLIST}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.366" endtime="20231225 18:51:46.366"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${MORE-OPTIONS-PLAYLIST}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.366" endtime="20231225 18:51:46.366"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${MORE-OPTIONS-PLAYLIST}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.366" endtime="20231225 18:51:46.366"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${DELETE-PLAYLIST}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.366" endtime="20231225 18:51:46.366"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DELETE-PLAYLIST}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.366" endtime="20231225 18:51:46.366"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CONFIRM-DELETE-PLAYLIST}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20231225 18:51:46.366" endtime="20231225 18:51:46.366"/>
+</kw>
+<status status="FAIL" starttime="20231225 18:51:46.344" endtime="20231225 18:51:46.366"/>
+</kw>
+<kw name="Scroll_To" library="android_homepage_keywords">
+<status status="NOT RUN" starttime="20231225 18:51:46.367" endtime="20231225 18:51:46.367"/>
+</kw>
+<status status="FAIL" starttime="20231225 18:51:46.343" endtime="20231225 18:51:46.368">No application is open</status>
+</test>
+<status status="FAIL" starttime="20231225 18:51:28.079" endtime="20231225 18:51:46.372"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Android Verify Home Page">Android Verify Home Page</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231225 18:51:28.848" level="ERROR">Error in file 'C:\Users\AMIT'S\PycharmProjects\demoMusicApp\resources\resource.robot' on line 3: Importing library 'Builtin' failed: ModuleNotFoundError: No module named 'Builtin'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Scripts\robot.exe
+  C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312
+  C:\Users\AMIT'S\AppData\Local\Programs\Python\Python312\Lib\site-packages</msg>
+<msg timestamp="20231225 18:51:33.579" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABC31B4E90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg timestamp="20231225 18:51:37.656" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABC31B6870&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg timestamp="20231225 18:51:41.743" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABC31B7380&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg timestamp="20231225 18:51:46.303" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20231225 18:51:46.334" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20231225 18:51:46.362" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
